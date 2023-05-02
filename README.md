@@ -1,4 +1,23 @@
+## Nick Lal | Software Developer
+
+<a href="https://www.nicklal.dev">
+  <img 
+    src="https://media1.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
+    alt="Laptop writing code GIF"
+    width="200"
+    loading="lazy"
+  />
+</a>
+
+My portfolio site where I showcase my development experience and work that I've done.
+
+[View my portfolio site](https://www.nicklal.dev).
+
+Built with ```Next, Tailwind CSS```.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+---
 
 ## Getting Started
 
@@ -12,7 +31,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `pages/index.jsx`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
