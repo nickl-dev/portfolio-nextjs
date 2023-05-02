@@ -70,12 +70,12 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className=' cursor-pointer text-2xl'
+                  className='cursor-pointer text-2xl text-gray-800 dark:text-white'
                 />
               </li>
               <li>
                 <a
-                  className='bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 border-none rounded-md ml-8'
+                  className='bg-gray-800 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none rounded-md ml-8'
                   href='/nick-lal-resume.pdf'
                   download='nick-lal-resume.pdf'
                 >
@@ -87,7 +87,7 @@ export default function Home() {
 
           {/* About Me */}
           <div className='text-center'>
-            <h2 className='text-5xl py-2 text-teal-600 font-semibold dark:text-teal-400 md:text-6xl'>
+            <h2 className='text-5xl py-2 font-semibold dark:text-white md:text-6xl'>
               {process.env.NEXT_PUBLIC_MY_NAME}
             </h2>
 
