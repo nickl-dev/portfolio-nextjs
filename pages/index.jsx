@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Meta tags */}
       <Head>
-        <title>{process.env.NEXT_PUBLIC_MY_NAME} | {process.env.NEXT_PUBLIC_OCCUPATION}</title>
+        <title>{process.env.NEXT_PUBLIC_SITE_NAME}</title>
         <meta name='description' content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION} />
         <meta property='og:description' content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION} />
         <meta property='og:title' content={process.env.NEXT_PUBLIC_SITE_NAME} />
@@ -75,7 +75,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'
+                  className='bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 border-none rounded-md ml-8'
                   href='/nick-lal-resume.pdf'
                   download='nick-lal-resume.pdf'
                 >
@@ -87,15 +87,18 @@ export default function Home() {
 
           {/* About Me */}
           <div className='text-center'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl'>
+            <h2 className='text-5xl py-2 text-teal-600 font-semibold dark:text-teal-400 md:text-6xl'>
               {process.env.NEXT_PUBLIC_MY_NAME}
             </h2>
+
             <h3 className='text-2xl py-2 dark:text-white md:text-3xl'>
               {process.env.NEXT_PUBLIC_OCCUPATION}
             </h3>
-            <p className='text-md py-5 leading-tight	 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl'>
+
+            <p className='text-md py-5 text-gray-800 dark:text-gray-200 max-w-2xl mx-auto md:text-xl leading-tight'>
               {process.env.NEXT_PUBLIC_DESCRIPTION}
             </p>
+
             <div className='text-5xl flex justify-center gap-2 py-3 text-gray-600 dark:text-gray-400'>
               <a href='https://www.linkedin.com/in/nicklal/'>
                 <AiFillLinkedin />
