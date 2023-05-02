@@ -57,7 +57,7 @@ export default function Home() {
         <meta property='og:description' content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION} />
         <meta property='og:title' content={process.env.NEXT_PUBLIC_SITE_NAME} />
         <meta property='og:site_name' content={process.env.NEXT_PUBLIC_SITE_URL} />
-        <meta property='og:image' content='../public/avatar.jpg' />
+        <meta property='og:image' content='https://assets.vercel.com/image/upload/front/vercel/twitter-card.png' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta property='og:type' content='Website' />
