@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
@@ -8,11 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        georgia: 'georgia',
-        monospace: 'monospace'
-      },
-    },
+        georgia: ['Georgia', 'Times New Roman', 'Times', 'serif']
+      }
+    }
   },
-  plugins: [],
-};
+  plugins: []
+}
