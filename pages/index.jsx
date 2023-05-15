@@ -7,15 +7,24 @@ import greetingsScreenshot from "../public/project-screenshots/greetings-screens
 import Head from "next/head";
 import Image from "next/image";
 import myGradientScreenshot from "../public/project-screenshots/mygradient-screenshot.png";
+import newsSiteScreenshot from '../public/project-screenshots/news-site-screenshot.png'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   const projects = [
     {
+      title: 'News Site (work in progress)',
+      description: 'A news site with the latest headlines',
+      techStack: 'Next.js, News API, Tailwind CSS, SCSS',
+      screenshot: newsSiteScreenshot,
+      demo: 'https://nickl-dev-news-site.vercel.app/',
+      code: 'https://github.com/nickl-dev/news-site'
+    },
+    {
       title: 'Canada Drives - Homepage 2.0',
-      description: 'Canada Drives static website home page 2.0',
-      techStack: 'JavaScript, Nuxt, Tailwind, SCSS',
+      description: 'Canada Drives static website homepage revamp',
+      techStack: 'JavaScript, Nuxt.js, Tailwind, SCSS',
       screenshot: canadaDrivesScreenShot,
       demo: 'https://www.canadadrives.ca/'
     },
@@ -23,7 +32,7 @@ export default function Home() {
       title: 'Cleanfolio',
       description:
         'Clean and simple portfolio site template for developers',
-      techStack: 'JavaScript, Vue, SCSS',
+      techStack: 'JavaScript, Vue.js, SCSS',
       screenshot: cleanfolioScreenshot,
       demo: 'https://nickl-dev-cleanfolio.netlify.app/',
       code: 'https://github.com/nickl-dev/cleanfolio-vue'
@@ -32,7 +41,7 @@ export default function Home() {
       title: 'Greetings',
       description: 'Social media application',
       techStack:
-        'JavaScript, React, Semantic UI, Express, Apollo, GraphQL, MongoDB',
+        'JavaScript, React.js, Semantic UI, Express, Apollo, GraphQL, MongoDB',
         screenshot: greetingsScreenshot,
       demo: 'https://nickl-dev-greetings.netlify.app/',
       code: 'https://github.com/nickl-dev/greetings'
@@ -116,20 +125,40 @@ export default function Home() {
           <h3 className='text-3xl py-1 dark:text-white'>My Work</h3>
 
           {/* Projects */}
-          <div className='flex flex-col gap-10 py-10 md:flex-row md:flex-wrap'>
+          <div className='grid gap-10 py-10 sm:grid-cols-2'>
             {projects.map((project, index) => {
               return (
                 <div
-                  className='basis-1 flex-1 shadow-lg hover:shadow-xl rounded-lg dark:shadow-gray-600'
-                  key={index}>
+                  className='rounded-md p-4 border border-gray-400 basis-1'
+                  key={index}
+                >
+                  <p className='font-semibold text-lg mb-2'>{project.title}</p>
+                  <p className='mb-1'>{project.description}</p>
+                  <code className='text-sm leading-3'>{project.techStack}</code>
+
+                  <div className='mt-2 mb-3'>
+                    <a className='py-1 px-2 rounded-md border bg-gray-800 text-white dark:bg-white dark:text-gray-800' href={project.demo}>See Demo</a>
+                    {project.code ?
+                      <a
+                        className='py-1 px-2 rounded-md border bg-gray-800 text-white dark:bg-white dark:text-gray-800 ml-2'
+                        href={project.code}
+                      >
+                        See Code
+                      </a>
+                    : null}
+                  </div>
+
+                  <hr className='mb-2 border border-gray-400'/>
+
                   <a href={project.demo}>
                     <Image
                       alt='Project screenshot'
-                      className='rounded-lg object-cover mt-2 hover:bg-slate-100'
-                      height={"100%"}
+                      className='mt-2 hover:bg-slate-100'
+                      // height={"100%"}
                       layout='responsive'
+                      // fill={true}
                       src={project.screenshot}
-                      width={"100%"}
+                      // width={"100%"}
                     />
                   </a>
                 </div>
