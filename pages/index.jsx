@@ -7,20 +7,11 @@ import greetingsScreenshot from "../public/project-screenshots/greetings-screens
 import Head from "next/head";
 import Image from "next/image";
 import myGradientScreenshot from "../public/project-screenshots/mygradient-screenshot.png";
-import newsSiteScreenshot from '../public/project-screenshots/news-site-screenshot.png'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   const projects = [
-    {
-      title: 'News Site (work in progress)',
-      description: 'A news site with the latest headlines',
-      techStack: 'Next.js, News API, Tailwind CSS, SCSS',
-      screenshot: newsSiteScreenshot,
-      demo: 'https://nickl-dev-news-site.vercel.app/',
-      code: 'https://github.com/nickl-dev/news-site'
-    },
     {
       title: 'Canada Drives - Homepage 2.0',
       description: 'Canada Drives static website homepage revamp',
@@ -48,8 +39,8 @@ export default function Home() {
     },
     {
       title: 'MyGradient',
-      description: 'Dual color gradient generator',
-      techStack: 'HTML, SCSS, JavaScript',
+      description: 'Dual color background gradient generator',
+      techStack: 'HTML, TypeScript, Bootstrap, SCSS',
       screenshot: myGradientScreenshot,
       demo: 'https://nickl-dev-mygradient.netlify.app/',
       code: 'https://github.com/nickl-dev/mygradient'
