@@ -62,7 +62,7 @@ export default function Home() {
         <meta property='og:image:height' content='630' />
         <meta property='og:type' content='Website' />
         <meta property='og:url' content={process.env.NEXT_PUBLIC_SITE_URL} />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='iconicon' href='/favicon.io'></link>
       </Head>
 
       <main className='bg-white px-5 sm:px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
@@ -75,9 +75,10 @@ export default function Home() {
                   className='cursor-pointer text-2xl text-gray-800 dark:text-white'
                 />
               </li>
+
               <li>
                 <a
-                  className='bg-gray-800 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none rounded-md ml-8'
+                  className='bg-gray-800 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none ml-8 rounded-sm'
                   href='/nick-lal-resume.pdf'
                   download='nick-lal-resume.pdf'
                 >
@@ -97,7 +98,7 @@ export default function Home() {
               {process.env.NEXT_PUBLIC_OCCUPATION}
             </h3>
 
-            <p className='text-md py-5 text-gray-800 dark:text-gray-200 max-w-2xl mx-auto md:text-xl leading-tight'>
+            <p className='text-md py-5 text-gray-800 dark:text-gray-200 max-w-2xl mx-auto md:text-lg'>
               {process.env.NEXT_PUBLIC_DESCRIPTION}
             </p>
 
@@ -113,38 +114,46 @@ export default function Home() {
         </section>
 
         <section className='py-10'>
-          <h3 className='text-3xl py-1 dark:text-white'>My Work</h3>
+          <h3 className='text-3xl text-center py-1 dark:text-white'>My Work</h3>
 
           {/* Projects */}
-          <div className='grid gap-10 py-10 sm:grid-cols-2'>
+          <div className='mt-12'>
             {projects.map((project, index) => {
               return (
                 <div
-                  className='rounded-md p-4 border border-gray-400 basis-1'
+                  className='flex flex-col justify-center items-center max-w-lg	xl:max-w-none xl:w-full xl:flex-row xl:items-start mx-auto mb-20 dark:text-white'
                   key={index}
                 >
-                  <p className='font-semibold text-lg mb-2'>{project.title}</p>
-                  <p className='mb-1'>{project.description}</p>
-                  <code className='text-sm leading-3'>{project.techStack}</code>
+                  <div className='mb-6 w-full max-w-2xl xl:w-80 xl:m-0 xl:pr-7'>
+                    <p className='font-semibold text-lg mb-2'>{project.title}</p>
+                    <p className='mb-1'>{project.description}</p>
+                    <code className='text-sm leading-3 dark:text-gray-200'>{project.techStack}</code>
 
-                  <div className='mt-2 mb-3'>
-                    <a className='py-1 px-2 rounded-md border bg-gray-800 text-white dark:bg-white dark:text-gray-800' href={project.demo}>See Demo</a>
-                    {project.code ?
+                    <div className='mt-3.5'>
                       <a
-                        className='py-1 px-2 rounded-md border bg-gray-800 text-white dark:bg-white dark:text-gray-800 ml-2'
-                        href={project.code}
+                        className='py-2 px-4 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded-sm'
+                        href={project.demo}
                       >
-                        See Code
+                        See Demo
                       </a>
-                    : null}
+                      {project.code ?
+                        <a
+                          className='py-2 px-4 bg-gray-800 text-white dark:bg-white dark:text-gray-800 ml-2 rounded-sm'
+                          href={project.code}
+                        >
+                          See Code
+                        </a>
+                      : null}
+                    </div>
                   </div>
 
-                  <hr className='mb-2 border border-gray-400'/>
-
-                  <a href={project.demo}>
+                  <a
+                    href={project.demo}
+                    className='w-full shadow-lg hover:shadow-xl xl:max-w-lg'
+                  >
                     <Image
+                      className='w-full xl:max-w-lg rounded-sm'
                       alt='Project screenshot'
-                      className='mt-2 hover:bg-slate-100'
                       // height={"100%"}
                       layout='responsive'
                       // fill={true}
