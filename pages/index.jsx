@@ -1,7 +1,7 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
-import canadaDrivesScreenShot from "../public/project-screenshots/canadadrives-homepage-2.0-screenshot.png";
+import robofriendsScreenshot from "../public/project-screenshots/robofriends-screenshot.png";
 import cleanfolioScreenshot from "../public/project-screenshots/cleanfolio-screenshot.png";
 import greetingsScreenshot from "../public/project-screenshots/greetings-screenshot.png";
 import Head from "next/head";
@@ -13,17 +13,17 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Canada Drives - Homepage 2.0',
-      description: 'Canada Drives static website homepage revamp',
-      techStack: 'JavaScript, Nuxt.js, Tailwind, SCSS',
-      screenshot: canadaDrivesScreenShot,
-      demo: 'https://www.canadadrives.ca/'
+      title: 'Robofriends',
+      description: 'Robot search directory',
+      techStack: 'React.js, Tailwind CSS',
+      screenshot: robofriendsScreenshot,
+      demo: 'https://nickl-dev-robofriends.netlify.app/',
+      code: 'https://github.com/nickl-dev/robofriends'
     },
     {
       title: 'Cleanfolio',
-      description:
-        'Clean and simple portfolio site template for developers',
-      techStack: 'JavaScript, Vue.js, SCSS',
+      description: 'Clean and simple portfolio site template for developers',
+      techStack: 'Vue.js, SCSS',
       screenshot: cleanfolioScreenshot,
       demo: 'https://nickl-dev-cleanfolio.netlify.app/',
       code: 'https://github.com/nickl-dev/cleanfolio-vue'
@@ -32,7 +32,7 @@ export default function Home() {
       title: 'Greetings',
       description: 'Social media application',
       techStack:
-        'JavaScript, React.js, Semantic UI, Express, Apollo, GraphQL, MongoDB',
+        'React.js, Semantic UI, Express, Apollo, GraphQL, MongoDB',
         screenshot: greetingsScreenshot,
       demo: 'https://nickl-dev-greetings.netlify.app/',
       code: 'https://github.com/nickl-dev/greetings'
