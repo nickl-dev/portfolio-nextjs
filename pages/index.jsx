@@ -13,7 +13,7 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Robofriends',
+      title: 'RoboFriends',
       description: 'Robot search directory',
       techStack: 'React.js, Tailwind CSS',
       screenshot: robofriendsScreenshot,
