@@ -2,7 +2,6 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import robofriendsScreenshot from "../public/project-screenshots/robofriends-screenshot.png";
-import cleanfolioScreenshot from "../public/project-screenshots/cleanfolio-screenshot.png";
 import greetingsScreenshot from "../public/project-screenshots/greetings-screenshot.png";
 import Head from "next/head";
 import Image from "next/image";
@@ -19,14 +18,6 @@ export default function Home() {
       screenshot: robofriendsScreenshot,
       demo: 'https://nickl-dev-robofriends.netlify.app/',
       code: 'https://github.com/nickl-dev/robofriends'
-    },
-    {
-      title: 'Cleanfolio',
-      description: 'Clean and simple portfolio site template for developers',
-      techStack: 'Vue.js, SCSS',
-      screenshot: cleanfolioScreenshot,
-      demo: 'https://nickl-dev-cleanfolio.netlify.app/',
-      code: 'https://github.com/nickl-dev/cleanfolio-vue'
     },
     {
       title: 'Greetings',
