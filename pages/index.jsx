@@ -14,7 +14,6 @@ export default function Home() {
     {
       title: 'RoboFriends',
       description: 'Robot search directory',
-      techStack: 'React.js, Tailwind CSS',
       screenshot: robofriendsScreenshot,
       demo: 'https://nickl-dev-robofriends.netlify.app/',
       code: 'https://github.com/nickl-dev/robofriends'
@@ -22,16 +21,13 @@ export default function Home() {
     {
       title: 'Greetings',
       description: 'Social media application',
-      techStack:
-        'React.js, Semantic UI, Express, Apollo, GraphQL, MongoDB',
-        screenshot: greetingsScreenshot,
+      screenshot: greetingsScreenshot,
       demo: 'https://nickl-dev-greetings.netlify.app/',
       code: 'https://github.com/nickl-dev/greetings'
     },
     {
       title: 'MyGradient',
       description: 'Dual color background gradient generator',
-      techStack: 'HTML, TypeScript, Bootstrap, SCSS',
       screenshot: myGradientScreenshot,
       demo: 'https://nickl-dev-mygradient.netlify.app/',
       code: 'https://github.com/nickl-dev/mygradient'
@@ -117,8 +113,7 @@ export default function Home() {
                 >
                   <div className='mb-6 w-full max-w-2xl xl:w-80 xl:m-0 xl:pr-7'>
                     <p className='font-semibold text-lg mb-2'>{project.title}</p>
-                    <p className='mb-1'>{project.description}</p>
-                    <code className='text-sm leading-3 dark:text-gray-200'>{project.techStack}</code>
+                    <p>{project.description}</p>
 
                     <div className='mt-3.5'>
                       <a
