@@ -15,7 +15,7 @@ export default function Home() {
       title: 'SmartBrain',
       description: 'Face detection application',
       screenshot: smartBrainScreenshot,
-      demo: '../public/nick-lal-smartbrain-demo-compressed.mp4',
+      demo: '../public/nick-lal-smartbrain-demo.mp4',
       code: 'https://github.com/nickl-dev/smartbrain',
       download: true
     },
