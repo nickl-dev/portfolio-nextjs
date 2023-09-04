@@ -1,36 +1,39 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
-import robofriendsScreenshot from "../public/project-screenshots/robofriends-screenshot.png";
-import greetingsScreenshot from "../public/project-screenshots/greetings-screenshot.png";
 import Head from "next/head";
 import Image from "next/image";
 import myGradientScreenshot from "../public/project-screenshots/mygradient-screenshot.png";
+import robofriendsScreenshot from "../public/project-screenshots/robofriends-screenshot.png";
+import smartBrainScreenshot from "../public/project-screenshots/smartbrain-screenshot.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   const projects = [
     {
+      title: 'SmartBrain',
+      description: 'Face detection application',
+      screenshot: smartBrainScreenshot,
+      demo: '../public/nick-lal-smartbrain-demo.mp4',
+      code: 'https://github.com/nickl-dev/smartbrain',
+      download: true
+    },
+    {
       title: 'RoboFriends',
       description: 'Robot search directory',
       screenshot: robofriendsScreenshot,
       demo: 'https://nickl-dev-robofriends.netlify.app/',
-      code: 'https://github.com/nickl-dev/robofriends'
-    },
-    {
-      title: 'Greetings',
-      description: 'Social media application',
-      screenshot: greetingsScreenshot,
-      demo: 'https://nickl-dev-greetings.netlify.app/',
-      code: 'https://github.com/nickl-dev/greetings'
+      code: 'https://github.com/nickl-dev/robofriends',
+      download: false
     },
     {
       title: 'MyGradient',
       description: 'Dual color background gradient generator',
       screenshot: myGradientScreenshot,
       demo: 'https://nickl-dev-mygradient.netlify.app/',
-      code: 'https://github.com/nickl-dev/mygradient'
+      code: 'https://github.com/nickl-dev/mygradient',
+      download: false
     }
   ]
 
@@ -118,7 +121,8 @@ export default function Home() {
                     <div className='mt-3.5'>
                       <a
                         className='py-2 px-4 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded-sm'
-                        href={project.demo}
+                        href={project.download ? project.demo.replace('../public', '') : project.demo}
+                        download={project.download ? project.demo.replace('../public/', '') : null}
                       >
                         See Demo
                       </a>
