@@ -15,29 +15,27 @@ export default function Home() {
       title: 'SmartBrain',
       description: 'Face detection application',
       screenshot: smartBrainScreenshot,
-      demo: '../public/nick-lal-smartbrain-demo.mp4',
-      code: 'https://github.com/nickl-dev/smartbrain',
-      download: true
+      demo: 'https://streamable.com/he3p1a',
+      code: 'https://github.com/nickl-dev/smartbrain'
     },
     {
       title: 'RoboFriends',
       description: 'Robot search directory',
       screenshot: robofriendsScreenshot,
       demo: 'https://nickl-dev-robofriends.netlify.app/',
-      code: 'https://github.com/nickl-dev/robofriends',
-      download: false
+      code: 'https://github.com/nickl-dev/robofriends'
     },
     {
       title: 'MyGradient',
       description: 'Dual color background gradient generator',
       screenshot: myGradientScreenshot,
       demo: 'https://nickl-dev-mygradient.netlify.app/',
-      code: 'https://github.com/nickl-dev/mygradient',
-      download: false
+      code: 'https://github.com/nickl-dev/mygradient'
     }
   ]
 
   return (
+
     <div className={darkMode ? 'dark' : ''}>
 
       {/* Meta tags */}
@@ -62,13 +60,13 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className='cursor-pointer text-2xl text-gray-800 dark:text-white'
+                  className='cursor-pointer text-2xl text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-neutral-200'
                 />
               </li>
 
               <li>
                 <a
-                  className='bg-gray-800 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none ml-8 rounded-sm'
+                  className='bg-gray-800 hover:bg-gray-700 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none ml-8 rounded-sm'
                   href='/nick-lal-resume.pdf'
                   download='nick-lal-resume.pdf'
                 >
@@ -120,20 +118,17 @@ export default function Home() {
 
                     <div className='mt-3.5'>
                       <a
-                        className='py-2 px-4 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded-sm'
-                        href={project.download ? project.demo.replace('../public', '') : project.demo}
-                        download={project.download ? project.demo.replace('../public/', '') : null}
+                        className='py-2 px-4 bg-gray-800 hover:bg-gray-700 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 rounded-sm'
+                        href={project.demo}
                       >
                         See Demo
                       </a>
-                      {project.code ?
-                        <a
-                          className='py-2 px-4 bg-gray-800 text-white dark:bg-white dark:text-gray-800 ml-2 rounded-sm'
-                          href={project.code}
-                        >
-                          See Code
-                        </a>
-                      : null}
+                      <a
+                        className='py-2 px-4 bg-gray-800 hover:bg-gray-700 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 ml-2 rounded-sm'
+                        href={project.code}
+                      >
+                        See Code
+                      </a>
                     </div>
                   </div>
 
