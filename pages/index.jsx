@@ -1,56 +1,84 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import myGradientScreenshot from "../public/project-screenshots/mygradient-screenshot.png";
-import robofriendsScreenshot from "../public/project-screenshots/robofriends-screenshot.png";
-import smartBrainScreenshot from "../public/project-screenshots/smartbrain-screenshot.png";
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import RoboFriendsScreenshot from '../public/project-screenshots/robofriends-screenshot.png';
+import SmartBrainScreenshot from '../public/project-screenshots/smartbrain-screenshot.png';
+import CrownClothingScreenshot from '../public/project-screenshots/crown-clothing-screenshot.png';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   const projects = [
     {
+      title: 'Crown Clothing',
+      description: 'E-commerce clothing store',
+      screenshot: CrownClothingScreenshot,
+      demo: 'https://precious-brioche-816b1f.netlify.app/',
+      code: 'https://github.com/nickl-dev/crown-clothing'
+    },
+    {
       title: 'SmartBrain',
       description: 'Face detection application',
-      screenshot: smartBrainScreenshot,
+      screenshot: SmartBrainScreenshot,
       demo: 'https://streamable.com/he3p1a',
       code: 'https://github.com/nickl-dev/smartbrain'
     },
     {
       title: 'RoboFriends',
       description: 'Robot search directory',
-      screenshot: robofriendsScreenshot,
+      screenshot: RoboFriendsScreenshot,
       demo: 'https://nickl-dev-robofriends.netlify.app/',
       code: 'https://github.com/nickl-dev/robofriends'
-    },
-    {
-      title: 'MyGradient',
-      description: 'Dual color background gradient generator',
-      screenshot: myGradientScreenshot,
-      demo: 'https://nickl-dev-mygradient.netlify.app/',
-      code: 'https://github.com/nickl-dev/mygradient'
     }
-  ]
+  ];
 
   return (
-
     <div className={darkMode ? 'dark' : ''}>
-
       {/* Meta tags */}
       <Head>
         <title>{process.env.NEXT_PUBLIC_SITE_NAME}</title>
-        <meta name='description' content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION} />
-        <meta property='og:description' content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION} />
-        <meta property='og:title' content={process.env.NEXT_PUBLIC_SITE_NAME} />
-        <meta property='og:site_name' content={process.env.NEXT_PUBLIC_SITE_URL} />
-        <meta property='og:image' content='/site-image.svg' />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
-        <meta property='og:type' content='Website' />
-        <meta property='og:url' content={process.env.NEXT_PUBLIC_SITE_URL} />
-        <link rel='iconicon' href='/favicon.io'></link>
+        <meta
+          name='description'
+          content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION}
+        />
+        <meta
+          property='og:description'
+          content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION}
+        />
+        <meta
+          property='og:title'
+          content={process.env.NEXT_PUBLIC_SITE_NAME}
+        />
+        <meta
+          property='og:site_name'
+          content={process.env.NEXT_PUBLIC_SITE_URL}
+        />
+        <meta
+          property='og:image'
+          content='/site-image.svg'
+        />
+        <meta
+          property='og:image:width'
+          content='1200'
+        />
+        <meta
+          property='og:image:height'
+          content='630'
+        />
+        <meta
+          property='og:type'
+          content='Website'
+        />
+        <meta
+          property='og:url'
+          content={process.env.NEXT_PUBLIC_SITE_URL}
+        />
+        <link
+          rel='iconicon'
+          href='/favicon.io'
+        ></link>
       </Head>
 
       <main className='bg-white px-5 sm:px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
@@ -66,7 +94,7 @@ export default function Home() {
 
               <li>
                 <a
-                  className='bg-gray-800 hover:bg-gray-700 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none ml-8 rounded-sm'
+                  className='bg-gray-800 hover:bg-gray-600 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 px-4 py-2 border-none ml-8 rounded-sm'
                   href='/nick-lal-resume.pdf'
                   download='nick-lal-resume.pdf'
                 >
@@ -113,18 +141,20 @@ export default function Home() {
                   key={index}
                 >
                   <div className='mb-6 w-full max-w-2xl xl:w-80 xl:m-0 xl:pr-7'>
-                    <p className='font-semibold text-lg mb-2'>{project.title}</p>
+                    <p className='font-semibold text-lg mb-2'>
+                      {project.title}
+                    </p>
                     <p>{project.description}</p>
 
                     <div className='mt-3.5'>
                       <a
-                        className='py-2 px-4 bg-gray-800 hover:bg-gray-700 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 rounded-sm'
+                        className='py-2 px-4 bg-gray-800 hover:bg-gray-600 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 rounded-sm'
                         href={project.demo}
                       >
                         See Demo
                       </a>
                       <a
-                        className='py-2 px-4 bg-gray-800 hover:bg-gray-700 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 ml-2 rounded-sm'
+                        className='py-2 px-4 bg-gray-800 hover:bg-gray-600 dark:hover:bg-neutral-200 text-white dark:bg-white dark:text-gray-800 ml-2 rounded-sm'
                         href={project.code}
                       >
                         See Code
@@ -137,17 +167,14 @@ export default function Home() {
                     className='w-full shadow-lg hover:shadow-xl xl:max-w-lg'
                   >
                     <Image
-                      className='w-full xl:max-w-lg rounded-sm'
+                      className='w-full xl:max-w-lg rounded-sm hover:opacity-90'
                       alt='Project screenshot'
-                      // height={"100%"}
                       layout='responsive'
-                      // fill={true}
                       src={project.screenshot}
-                      // width={"100%"}
                     />
                   </a>
                 </div>
-              )
+              );
             })}
           </div>
         </section>
