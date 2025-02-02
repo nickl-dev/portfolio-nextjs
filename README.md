@@ -1,4 +1,4 @@
-## Nick Lal | Software Developer
+# Nick Lal | Software Developer
 
 <a href="https://www.nicklal.dev">
   <img 
@@ -13,7 +13,7 @@ My portfolio site where I showcase my development experience and work that I've 
 
 [View my portfolio site](https://www.nicklal.dev).
 
-Built with: `Next, Tailwind CSS`.
+Built with: `Next.js, Tailwind CSS`.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
