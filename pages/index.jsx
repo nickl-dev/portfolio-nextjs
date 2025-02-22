@@ -38,22 +38,25 @@ export default function Home() {
     <div className={darkMode ? 'dark' : ''}>
       {/* Meta tags */}
       <Head>
-        <title>{process.env.NEXT_PUBLIC_SITE_NAME}</title>
+        <title>
+          Nick Lal | Software Developer | Creating Scalable and Impactful Web
+          Applications
+        </title>
         <meta
           name='description'
-          content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION}
+          content='Software Developer focused on building performant, scalable, and user-friendly web applications. Passionate about problem-solving, clean code, and delivering high-quality digital experiences.'
         />
         <meta
           property='og:description'
-          content={process.env.NEXT_PUBLIC_SITE_DESCRIPTION}
+          content='Software Developer focused on building performant, scalable, and user-friendly web applications. Passionate about problem-solving, clean code, and delivering high-quality digital experiences.'
         />
         <meta
           property='og:title'
-          content={process.env.NEXT_PUBLIC_SITE_NAME}
+          content='Nick Lal | Software Developer | Creating Scalable and Impactful Web Applications'
         />
         <meta
           property='og:site_name'
-          content={process.env.NEXT_PUBLIC_SITE_URL}
+          content='https://www.nicklal.dev/'
         />
         <meta
           property='og:image'
@@ -73,7 +76,7 @@ export default function Home() {
         />
         <meta
           property='og:url'
-          content={process.env.NEXT_PUBLIC_SITE_URL}
+          content='https://www.nicklal.dev/'
         />
         <link
           rel='iconicon'
@@ -107,15 +110,20 @@ export default function Home() {
           {/* About Me */}
           <div className='text-center'>
             <h2 className='text-5xl py-2 font-semibold dark:text-white md:text-6xl'>
-              {process.env.NEXT_PUBLIC_MY_NAME}
+              Nick Lal
             </h2>
 
             <h3 className='text-2xl py-2 dark:text-white md:text-3xl'>
-              {process.env.NEXT_PUBLIC_OCCUPATION}
+              Software Developer
             </h3>
 
             <p className='text-md py-5 text-gray-800 dark:text-gray-200 max-w-2xl mx-auto md:text-lg'>
-              {process.env.NEXT_PUBLIC_DESCRIPTION}
+              I create performant, scalable, and user-friendly web applications.
+              I work closely with Product, Design, QA, and developers to
+              translate customer and business needs into clean, maintainable
+              code. Passionate about problem-solving, continuous learning, and
+              taking ownership of the development process from start to finish,
+              I prioritize quality, scalability, and clear communication.
             </p>
 
             <div className='text-5xl flex justify-center gap-2 py-3 text-gray-600 dark:text-gray-400'>
