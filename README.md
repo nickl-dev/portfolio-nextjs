@@ -11,7 +11,7 @@
 
 My portfolio site where I showcase my development experience and work that I've done.
 
-[View my portfolio site](https://www.nicklal.dev).
+[View my portfolio site](https://nicklal.vercel.app/).
 
 Built with: `Next.js, Tailwind CSS`.
 
